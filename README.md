@@ -12,6 +12,7 @@ The purpose of this project is to simplify the creation of multiple Roblox accou
 - **Customizable Account Details**: Users can specify the number of accounts to create and customize details such as usernames and passwords for each account.
 - **Headless Browser Support**: Users have the option to run the script in headless mode, which means the browser window is not displayed during execution, making it suitable for running in the background.
 - **Bypass FunCAPCHA**: Users will not have to worry about FunCapchas ruining the automation of accounts.
+- **Stored Accounts**: All made accounts will be stored in a file called "accounts.txt". This will contain the username, password and roblosecurity cookie for ease of access.
 
 ## Demo
 
