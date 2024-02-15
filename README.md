@@ -22,16 +22,10 @@ The purpose of this project is to simplify the creation of multiple Roblox accou
 1. Clone the repository to your local machine:
 
  ```bash
-   git clone https://github.com/your_username/roblox-account-creator.git
+   git clone https://github.com/andresv1/RobloxAccountGenerator.git
  ```
 
-2. Navigate to the project directory:
-
- ```bash
-   cd RobloxAccountGenerator
- ```
-
-3. Install the required dependencies using pip:
+2. Install the required dependencies using pip:
 
  ```bash
    pip install -r requirements.txt
