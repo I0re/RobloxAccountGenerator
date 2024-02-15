@@ -1,3 +1,4 @@
+altgraph==0.17.4
 attrs==23.2.0
 certifi==2024.2.2
 cffi==1.16.0
@@ -7,9 +8,14 @@ h11==0.14.0
 idna==3.6
 outcome==1.3.0.post0
 packaging==23.2
+pefile==2023.2.7
 pycparser==2.21
+pyinstaller==6.4.0
+pyinstaller-hooks-contrib==2024.1
 PySocks==1.7.1
+pywin32-ctypes==0.2.2
 selenium==4.17.2
+setuptools==69.1.0
 sniffio==1.3.0
 sortedcontainers==2.4.0
 trio==0.24.0
