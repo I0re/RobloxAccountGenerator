@@ -2,6 +2,8 @@
 
 The Roblox Account Generator is a Python script that automates the process of creating multiple Roblox accounts. It utilizes the Selenium framework for browser automation to simulate user actions on the Roblox website.
 
+The Chrome Browser Version this was tested on is '121.0.6167.185 (Official Build) (64-bit)'.
+
 ## Purpose
 
 The purpose of this project is to simplify the creation of multiple Roblox accounts, which can be useful for various purposes. Instead of manually creating each account, this script allows users to specify the number of accounts they want to create and provides options for customizing account details such as usernames and passwords.
