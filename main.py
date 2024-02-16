@@ -36,7 +36,7 @@ class RandomRobloxUser:
         last_name = random.choice(last_names).strip()
         return first_name, last_name
 
-def create_accounts(num_accounts, password, headless_var):
+def create_accounts(num_accounts, password, headless_var, nopecha_key):
     current_working_directory = os.path.dirname(__file__)
     chrome_driver_path = os.path.join(current_working_directory, "chromedriver.exe")
     chrome_service = Service(executable_path=chrome_driver_path)
@@ -45,11 +45,20 @@ def create_accounts(num_accounts, password, headless_var):
     nopecha_extension_path = os.path.join(current_working_directory, "NopeCHA.crx")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_extension(nopecha_extension_path)
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-infobars')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+    chrome_options.add_experimental_option('useAutomationExtension', False)
 
     if headless_var:
         chrome_options.add_argument("--headless")
 
     driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+    # Navigate to the NopeCHA setup page to set the subscription key.
+    driver.get(f"https://nopecha.com/setup#{nopecha_key}")
+    time.sleep(15)
     driver.get("https://roblox.com")
 
     for _ in range(num_accounts):
@@ -123,8 +132,9 @@ def create_accounts_gui():
         try:
             num_accounts = int(num_accounts_entry.get())
             password = password_entry.get()
+            nopecha_key = nopecha_key_entry.get()
             enable_headless = headless_var.get() == 1
-            create_accounts(num_accounts, password, enable_headless)
+            create_accounts(num_accounts, password, enable_headless ,nopecha_key)
             messagebox.showinfo("Success", f"{num_accounts} accounts created successfully!")
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {str(e)}")
@@ -133,7 +143,7 @@ def create_accounts_gui():
     root.title("Roblox Account Creator")
     icon_path = os.path.join(os.path.dirname(__file__), "assets", "icon.ico")
     root.iconbitmap(icon_path)
-    root.geometry("330x230")
+    root.geometry("330x290")
     root.configure(bg="#333")  # Background color
     root.resizable(False, False)  # Make the window non-resizable
 
@@ -154,21 +164,29 @@ def create_accounts_gui():
     password_entry = CTkEntry(frame, show="")
     password_entry.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
 
+    nopecha_key_label = CTkLabel(frame, text="NopeCHA Subscription Key:")
+    nopecha_key_label.grid(row=2, column=0, padx=5, pady=5, sticky="w")
+
+    nopecha_key_entry = CTkEntry(frame)  # Add entry widget for NopeCHA key
+    nopecha_key_entry.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+
     headless_label = CTkLabel(frame, text="Enable Headless Driver:")
-    headless_label.grid(row=2, column=0, padx=5, pady=5, sticky="w")
+    headless_label.grid(row=3, column=0, padx=5, pady=5, sticky="w")
 
     headless_var = ctk.IntVar()
     headless_checkbox_yes = CTkCheckBox(frame, text="Yes", variable=headless_var, onvalue=1, offvalue=0)
-    headless_checkbox_yes.grid(row=2, column=1, padx=5, pady=5, sticky="w")
+    headless_checkbox_yes.grid(row=3, column=1, padx=5, pady=5, sticky="w")
 
     submit_button = CTkButton(frame, text="Submit", command=submit)
-    submit_button.grid(row=3, columnspan=2, padx=10, pady=10)
+    submit_button.grid(row=4, columnspan=2, padx=10, pady=10)
 
     frame.rowconfigure(0, weight=1)  # Make rows expandable
     frame.rowconfigure(1, weight=1)
     frame.rowconfigure(2, weight=1)
+    frame.rowconfigure(3, weight=1)
     frame.columnconfigure(0, weight=1)  # Make columns expandable
     frame.columnconfigure(1, weight=1)
+    frame.columnconfigure(2, weight=1)
 
     root.grid_rowconfigure(0, weight=1)  # Make root widget expandable
     root.grid_columnconfigure(0, weight=1)
