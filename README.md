@@ -18,8 +18,9 @@ The purpose of this project is to simplify the creation of multiple Roblox accou
 
 ## Demo
 
-![image](https://github.com/I0re/RobloxAccountGenerator/assets/95900417/46d3061b-8312-4387-b5f0-b5be7adcf7fb)
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/914589420?h=14a2096790" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+[![Thumbnail](https://github.com/I0re/RobloxAccountGenerator/assets/95900417/46d3061b-8312-4387-b5f0-b5be7adcf7fb)](https://player.vimeo.com/video/914589420)
+
+<iframe src="https://player.vimeo.com/video/914589420" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ## Installation
 
