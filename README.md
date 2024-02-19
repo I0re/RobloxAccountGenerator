@@ -18,7 +18,7 @@ The purpose of this project is to simplify the creation of multiple Roblox accou
 
 ## Demo
 
-[![Watch the demo video](![thumb](https://github.com/I0re/RobloxAccountGenerator/assets/95900417/1332aef8-4fee-48d3-885e-325000573d77))](https://vimeo.com/914589420)
+[![Watch the demo video](![thumb](https://github.com/I0re/RobloxAccountGenerator/assets/95900417/1332aef8-4fee-48d3-885e-325000573d77))]
 
 ## Installation
 
