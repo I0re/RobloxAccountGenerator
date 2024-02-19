@@ -18,27 +18,7 @@ The purpose of this project is to simplify the creation of multiple Roblox accou
 
 ## Demo
 
-<div id="video-container" style="display: none;">
-    <iframe id="vimeo-video" src="https://player.vimeo.com/video/914589420" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<a id="thumbnail" href="javascript:void(0);">
-    <img src="https://github.com/I0re/RobloxAccountGenerator/assets/95900417/46d3061b-8312-4387-b5f0-b5be7adcf7fb" alt="Thumbnail">
-</a>
-
-<script>
-document.getElementById('thumbnail').addEventListener('click', function() {
-    var videoContainer = document.getElementById('video-container');
-    var vimeoVideo = document.getElementById('vimeo-video');
-    
-    // Show the video container and load the video
-    videoContainer.style.display = 'block';
-    vimeoVideo.src = vimeoVideo.src; // Reload the video to play it
-    
-    // Prevent the default action of the link
-    event.preventDefault();
-});
-</script>
+[![Thumbnail](https://github.com/I0re/RobloxAccountGenerator/assets/95900417/46d3061b-8312-4387-b5f0-b5be7adcf7fb)](https://player.vimeo.com/video/914589420)
 
 ## Installation
 
