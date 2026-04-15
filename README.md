@@ -1,4 +1,4 @@
-# Roblox Account Generator
+# Roblox Automated Registration & Workflow Suite
 
 The Roblox Account Generator is a Python script that automates the process of creating multiple Roblox accounts. It utilizes the Selenium framework for browser automation to simulate user actions on the Roblox website.
 
